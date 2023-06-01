@@ -2,25 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
-    <main class="container col-6">
-        
-        <div class="mt-2 p-5">
-			
+  <main class="container col-md-12 col-lg-10">
+    <div class="mt-2 px-sm-2 px-md-5">
+		  <h1>Tavsiye Listesine Göz At</h1>
 
-			<h1>Tavsiye Listesine Göz At</h1>
+      <!-- data listing with Alpine.js -->
+      <ul class="list-group" id="adv-list" x-data>
 
-			<!-- data listing with Alpine.js -->
-            <ul class="list-group" id="adv-list" x-data>
-				<template x-for="advice in $store.veriler.advList">
-					<li class="list-group-item">
-						<span class="badge bg-success me-3">#biriyilikyapkendine</span>
-						<span x-text="advice"></span>
-					</li>
-				</template>
-            </ul>
-		</div>
+        <template x-for="advice in $store.veriler.advList">
+          <!-- List item -->
+          <li class="list-group-item">
+            <span class="badge bg-success me-3">#biriyilikyapkendine</span>
+            <span x-text="advice"></span>
+          </li>
+          
+        </template>
+      </ul>
+    </div>
 
-    </main>
+  </main>
 </Layout>
 
 <script>
