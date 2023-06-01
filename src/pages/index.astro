@@ -1,43 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 ---
 
 <Layout>
-	<main class="container col-6 mt-5">
+	<main class="container col-6 mt-5" x-data="{ open: false }">
+         
+        <ul class="list-group list-group-flush h-100 pt-5">
 
-          
-        <ul id="daily-adv" class="list-group list-group-flush h-100 pt-5">
+			<!-- Random advice from advList waiting to be shown here  -->
+			<li x-show="open" class="list-group-item text-center" x-transition>
+				<b>Bugün;</b>
+				<p x-text="$store.veriler.randomAdv"></p>
+			</li>	
 		
-          <a href="#" class="btn btn-success col-4 mt-3" id="random-adv">Günlük Tavsiyemi Ver</a>
+			<!-- If  button is clicked > random advice is shown and the button is disabled  -->
+			<button class="btn btn-success d-block mt-3" :disabled="open ? true : false" x-on:click="open = !open">Tavsiye Ver</button>
         </ul>
+
+		<!-- If on above button is clicked > this information message is shown -->
+		<small :class="open ? 'd-block' : 'd-none'" class="text-secondary fw-normal">*Her yenilemede bir adet tavsiye alabilirsiniz</small>
     </main>
+
 </Layout>
 
 
 <script>
-	const randomAdv = document.querySelector('#random-adv');
-	const dailyAdv = document.querySelector('#daily-adv');
+    document.addEventListener("alpine:init", () => {
 
-	// Kullanılmayanlar
-	// const advList = document.querySelector('#adv-list');
-	// const addForm = document.forms[0];
-	// const addInput = document.getElementById('floatingInput');
+		let Alpine = window["Alpine"];
 
-	// Advice List
-	// https://raw.githubusercontent.com/sonatipek/dogadan-tea-advices/main/api/advices.json
-
-	// Random Advice
-	randomAdv.addEventListener('click', (e) => {
-		e.preventDefault()
-		let randomNumber = Math.floor(Math.random() * (dogadanTavsiyeler.length));
-
-		let listElement = document.createElement("li")
-		listElement.className = "list-group-item list-group-item-success"
-		listElement.textContent = `Bugün; \t${dogadanTavsiyeler[randomNumber]}`
-		dailyAdv.insertBefore(listElement, dailyAdv.firstChild);    
-	})
+		
+		async function randomAdv() {
+			let randomNumber;
+			let url = "https://raw.githubusercontent.com/sonatipek/dogadan-tea-advices/main/api/advices.json";
 
 
+			// fetch the advList data
+			try {
+				let res = await fetch(url);
+				let result = await res.json();
+				result = result.advList;
 
+				
+				randomNumber = Math.floor(Math.random() * (result.length));	// Created random number for random advice
+				
+				
+				return result[randomNumber]; //Return random advice
+			}catch (err) {
+				console.log(err);
+			}
+
+		}
+
+   
+      
+		//---------------------------------------------
+		Alpine.store("veriler", {
+			init() {
+				console.log(Alpine.store("globalvar").text);
+			},
+				randomAdv,
+			});
+		});
 </script>
