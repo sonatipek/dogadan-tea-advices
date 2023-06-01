@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout>
+	<main class="container col-6 mt-5">
+
+          
+        <ul id="daily-adv" class="list-group list-group-flush h-100 pt-5">
+		
+          <a href="#" class="btn btn-success col-4 mt-3" id="random-adv">Günlük Tavsiyemi Ver</a>
+        </ul>
+    </main>
+</Layout>
+
+
+<script>
+	const randomAdv = document.querySelector('#random-adv');
+	const dailyAdv = document.querySelector('#daily-adv');
+
+	// Kullanılmayanlar
+	// const advList = document.querySelector('#adv-list');
+	// const addForm = document.forms[0];
+	// const addInput = document.getElementById('floatingInput');
+
+	// Advice List
+	const dogadanTavsiyeler = [
+		"Değer verdiğin insanlara sevgini ifade et.",
+		"Asansör yerine merdiven kullan.",
+		"Hiç tanımadığın birine gülümse.",
+		"Yeni bir yemek tarifi dene.",
+		"E-postalarını temizleyerek karbon ayak izini azalt.",
+		"Yatmadan 1-2 saat önce dijital ekranları kapat.",
+		"Zamanını verimli kullanmak için yapılacaklar listesi çıkart.",
+		"Bir gün boyunca hiç şikayet etmemeyi dene",
+		"Yeni bir egzersiz dene.",
+		"Kullanmadığın 3 eşyadan kurtul, yeniye yer aç.",
+		"Uzun zamandır ertelediğin bir şey için adım at.",
+		"Sevdiklerine daha fazla zaman ayır",
+		"En sevdiğin şarkılardan bir çalma listesi oluştur.",
+		"Mandala boyayarak ruhunu dinlendir.",
+		"En sevdiğin şarkı eşliğinde dans et.",
+		"Hayatındaki üç şeye şükret.",
+		"Sevdiğin bir müzikle bulunduğun anın tadını çıkart.",
+		"Kendine son zamanlarda başardıkların için teşekkür et.",
+		"Gün içinde nefes molaları ver.",
+		"Atıklarını ayrıştırarak geri dönüşüm kutularını kullan.",
+		"Alışverişlerinde geri dönüştürülebilir ürünlere öncelik ver.",
+		"Etrafındaki bir kişiye iltifat et.",
+		"Gün içinde nefes molaları ver",
+		"İhtiyacın kadar tüket, gıda israfının önüne geç."
+	]
+
+	// Random Advice
+	randomAdv.addEventListener('click', (e) => {
+		e.preventDefault()
+		let randomNumber = Math.floor(Math.random() * (dogadanTavsiyeler.length));
+
+		let listElement = document.createElement("li")
+		listElement.className = "list-group-item list-group-item-success"
+		listElement.textContent = `Bugün; \t${dogadanTavsiyeler[randomNumber]}`
+		dailyAdv.insertBefore(listElement, dailyAdv.firstChild);    
+	})
+
+
+
+</script>

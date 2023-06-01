@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+<Layout>
+
+    <main class="container col-6">
+        
+        <div class="mt-2 p-5">
+          <h1>Tavsiye Listesine Göz At</h1>
+            <ul class="list-group" id="adv-list">
+              <!-- <li class="list-group-item"> Test </li>   -->
+            </ul>
+          </div>
+    </main>
+</Layout>
+
+<script>
+    const advList = document.querySelector('#adv-list');
+
+
+    // Advice List
+	const dogadanTavsiyeler = [
+		"Değer verdiğin insanlara sevgini ifade et.",
+		"Asansör yerine merdiven kullan.",
+		"Hiç tanımadığın birine gülümse.",
+		"Yeni bir yemek tarifi dene.",
+		"E-postalarını temizleyerek karbon ayak izini azalt.",
+		"Yatmadan 1-2 saat önce dijital ekranları kapat.",
+		"Zamanını verimli kullanmak için yapılacaklar listesi çıkart.",
+		"Bir gün boyunca hiç şikayet etmemeyi dene",
+		"Yeni bir egzersiz dene.",
+		"Kullanmadığın 3 eşyadan kurtul, yeniye yer aç.",
+		"Uzun zamandır ertelediğin bir şey için adım at.",
+		"Sevdiklerine daha fazla zaman ayır",
+		"En sevdiğin şarkılardan bir çalma listesi oluştur.",
+		"Mandala boyayarak ruhunu dinlendir.",
+		"En sevdiğin şarkı eşliğinde dans et.",
+		"Hayatındaki üç şeye şükret.",
+		"Sevdiğin bir müzikle bulunduğun anın tadını çıkart.",
+		"Kendine son zamanlarda başardıkların için teşekkür et.",
+		"Gün içinde nefes molaları ver.",
+		"Atıklarını ayrıştırarak geri dönüşüm kutularını kullan.",
+		"Alışverişlerinde geri dönüştürülebilir ürünlere öncelik ver.",
+		"Etrafındaki bir kişiye iltifat et.",
+		"Gün içinde nefes molaları ver",
+		"İhtiyacın kadar tüket, gıda israfının önüne geç.",
+		"Gün içinde 10 dakikanı meditasyona ayır.",
+		"Su ısıtma çihazını ihtiyacın miktarında doldur.",
+		"Sevdiğin birine sürpriz bir hediye hazırla"
+	]
+
+    // ? When window loaded > Burası Liste kısmına taşınacak
+    window.addEventListener("load", (e) => {
+        for (let i = 0; i < dogadanTavsiyeler.length; i++) {
+            let listElement = document.createElement("li")
+            listElement.className = "list-group-item"
+            listElement.textContent = dogadanTavsiyeler[i]
+
+            let badge = document.createElement("span")
+            badge.classList = "badge bg-success me-3"
+            badge.textContent = "#biriyilikyapkendine"
+            listElement.insertBefore(badge, listElement.firstChild)
+
+            advList.appendChild(listElement);
+
+        }
+
+    });
+</script>

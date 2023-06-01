@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+<Layout>
+
+    <main class="container col-6">
+        <form class="p-5 mt-5" id="add-form">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" name="floatingInput" placeholder="Doğadan tavsiye">
+                <label for="floatingInput">Doğadan Tavsiye Giriniz</label>
+              </div>
+            
+            <button type="submit" class="btn btn-success col-4" id="add-button">Ekle</button>
+        </form>
+    
+    </main>
+</Layout>
+
+<script>
+	const addForm = document.forms[0];
+
+
+    // ? Advice İnput > Burası Tavsiye Giriş Kısmına Taşınacak
+    addForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        alert("Şimdilik dışarıdan doğadan tavsiyesi girilemiyor!")
+    })
+
+</script>
