@@ -1,24 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Alpinejs from '../components/Alpinejs.astro';
 ---
-<Layout>
-	<!-- <Alpinejs></Alpinejs> -->
-    <main class="container col-6">
-        
-        <div class="mt-2 p-5">
-          <h1>Tavsiye Listesine Göz At</h1>
-            <ul class="list-group" id="adv-list" x-data>
-				<template x-for="advice in $store.veriler.advList">
-					<li class="list-group-item">
-						<span class="badge bg-success me-3">#biriyilikyapkendine</span>
-						<span x-text="advice"></span>
-					</li>
-				</template>
-            </ul>
-          </div>
-    </main>
-</Layout>
 
 <script>
     document.addEventListener("alpine:init", () => {
@@ -43,6 +24,9 @@ import Alpinejs from '../components/Alpinejs.astro';
       }
 
    
+
+
+      
       //---------------------------------------------
       Alpine.store("veriler", {
         init() {
