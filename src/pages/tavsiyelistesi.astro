@@ -1,13 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Alpinejs from '../components/Alpinejs.astro';
 ---
 <Layout>
-	<!-- <Alpinejs></Alpinejs> -->
     <main class="container col-6">
         
         <div class="mt-2 p-5">
-          <h1>Tavsiye Listesine Göz At</h1>
+			
+
+			<h1>Tavsiye Listesine Göz At</h1>
+
+			<!-- data listing with Alpine.js -->
             <ul class="list-group" id="adv-list" x-data>
 				<template x-for="advice in $store.veriler.advList">
 					<li class="list-group-item">
@@ -16,7 +18,8 @@ import Alpinejs from '../components/Alpinejs.astro';
 					</li>
 				</template>
             </ul>
-          </div>
+		</div>
+
     </main>
 </Layout>
 
@@ -28,12 +31,11 @@ import Alpinejs from '../components/Alpinejs.astro';
       async function advList() {
         let url = "https://raw.githubusercontent.com/sonatipek/dogadan-tea-advices/main/api/advices.json";
         try {
-          let res = await fetch(url);
-        //   console.log(res.json());
-          let result = await res.json();
-          result = result.advList;
 
-        //   console.log(result);
+          let res = await fetch(url);
+          let result = await res.json();
+
+          result = result.advList;
           
           return result;
         } catch (err) {
