@@ -6,7 +6,7 @@ import Layout from '../layouts/Layout.astro';
 
     <main class="container col-6" x-data="{infoDanger: false}">
 
-        <form class="p-5 mt-5">
+        <form class="p-5 mt-5" @submit.prevent="default">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInput" name="floatingInput" placeholder="Doğadan tavsiye">
                 <label for="floatingInput">Doğadan Tavsiye Giriniz</label>
