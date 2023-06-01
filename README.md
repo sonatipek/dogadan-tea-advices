@@ -1,10 +1,10 @@
 # TR
-## Kullanılan Teknolojiler
+## 👨🏻‍💻 Kullanılan Teknolojiler
 - Alpine.js
 - Astro.js
 - Bootstrap
 
-## 🚀 Project Yapısı
+## 🚀 Proje Yapısı
 Proje içerisindeki klasör ve dosyalar:
 ```
 /
@@ -49,6 +49,11 @@ Geliştirmeye yardım etmek veya kendi bilgisaayarınızda test etmek için kull
 7. Tavsiye girişi yapılacak
 
 # EN
+## 👨🏻‍💻 Tech Stack
+- Alpine.js
+- Astro.js
+- Bootstrap
+
 ## 🚀 Project Structure
 Folders and files in the project:
 ```
