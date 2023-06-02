@@ -42,9 +42,9 @@ Geliştirmeye yardım etmek veya kendi bilgisaayarınızda test etmek için kull
 ## Eklenecek Özellikler
 1. Günlük Tavsiye ve anasayfa birbirinden ayrılacak
 2. anasayfada tanıtım olacak, nasıl destek olunacağı yazacak ve günlük tavsiye butonuna yönlendirme olacak
+3. Tavsiye girişi yapılacak
 4. dark ve light mode eklenecek
-5. tr ve en dil destekleri eklenecek
-6. Tavsiye girişi yapılacak
+5. tr ve en dil destekleri eklenece
 
 # EN
 ## 👨🏻‍💻 Tech Stack
