@@ -4,21 +4,24 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<main class="container col-md-6 col-sm-10 mt-5" style="min-height: 52vh;" x-data="{ open: false }">
-         
-        <ul class="list-group list-group-flush pt-5">
 
-			<!-- Random advice from advList waiting to be shown here  -->
-			<li x-show="open" class="list-group-item text-center" x-transition>
-				<b>Bugün;</b>
-				<p x-text="$store.veriler.randomAdv"></p>
-			</li>	
-		
-			<!-- If  button is clicked > random advice is shown and the button is disabled  -->
-			<button class="btn btn-success d-block mt-3" :disabled="open ? true : false" x-on:click="open = !open">Tavsiye Ver</button>
-        </ul>
+		<!-- Advice Card -->
+		<div class="card mb-4 rounded-3 shadow-sm border-success">
+			<div class="card-body" >
 
-		<!-- If on above button is clicked > this information message is shown -->
-		<small :class="open ? 'd-block' : 'd-none'" class="text-secondary fw-normal">*Her yenilemede bir adet tavsiye alabilirsiniz</small>
+				<!-- Random advice from advList waiting to be shown here  -->
+				<ul class="list-unstyled mt-3 mb-4 pb-1 text-center border-bottom" x-show="open" x-transition>
+					<li class="fw-bold">Bugün;</li>
+					<li x-text="$store.veriler.randomAdv"></li>
+				</ul>
+
+				<!-- If  button is clicked > random advice is shown and the button is disabled  -->
+				<button type="button" class="w-100 btn btn-lg btn-success" :disabled="open ? true : false" x-on:click="open = !open">Tavsiye Ver</button>
+				
+				<!-- If on above button is clicked > this information message is shown -->
+				<small :class="open ? 'd-block' : 'd-none'" class="text-secondary fw-normal">*Her yenilemede bir adet tavsiye alabilirsiniz</small>
+			</div>
+		</div>
     </main>
 
 </Layout>
