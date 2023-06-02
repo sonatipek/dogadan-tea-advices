@@ -5,19 +5,33 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 
     <main class="container col-md-6 col-sm-12" style="min-height: 52vh;" x-data="{infoDanger: false}">
+        <!-- Card -->
+        <div class="card border-success my-5 rounded-3 shadow-sm">
+            <!-- Card Title -->
+            <div class="card-header bg-success-subtle py-3 text-center">
+                <h4 class="my-0">Tavsiye Girişi</h4>
+            </div> 
 
-        <form class="p-md-5 p-sm-4 mt-5" @submit.prevent="default">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" name="floatingInput" placeholder="Doğadan tavsiye">
-                <label for="floatingInput">Doğadan Tavsiye Giriniz</label>
-              </div>
-            
-            <button x-on:click="infoDanger = true" type="submit" class="btn btn-success col-12" >Ekle</button>
-        </form>
+            <!-- Card Body -->
+            <div class="card-body">
+                <form class="" @submit.prevent="default">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" name="floatingInput" placeholder="Doğadan tavsiye">
+                        <label for="floatingInput">Doğadan Tavsiye Giriniz</label>
+                      </div>
+                    
+                    <button x-on:click="infoDanger = true" type="submit" class="btn btn-lg btn-success w-100" >Tavsiye Ekle</button>
+                </form>
+                
+            </div> <!--Card Body End -->
+        </div>  <!--Card End -->
+
+        <!-- Alert -->
         <div x-show="infoDanger" class="text-center alert alert-danger alert-dismissible fade show" role="alert">
             Şimdilik dışarıdan doğadan tavsiyesi girilemiyor! 
             <br>
             Yardım etmek istiyorsan <a target="_blank" href="https://github.com/sonatipek/dogadan-tea-advices" class="alert-link">GitHub</a> üzerinden kodlara ekleme yapabilirsin.
         </div>
+        <!-- Alert End -->
     </main>
 </Layout>
