@@ -1,27 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const data = await fetch('https://raw.githubusercontent.com/sonatipek/dogadan-tea-advices/main/api/advices.json').then(r => r.json());
+const myDatas = data.advList
 ---
 <Layout>
   <main class="container col-md-12 col-lg-10">
-    <div class="mt-2 px-sm-2 px-md-5">
-		  <h1>Tavsiye Listesine Göz At</h1>
 
-      <!-- data listing with Alpine.js -->
-      <ul class="list-group" id="adv-list" x-data>
+    <!-- Card -->
+    <div class="card my-5 rounded-3 shadow-sm">
+      <div class="card-header py-3">
+        <h4 class="my-0">Tavsiye Listesi</h4>
+      </div>
+      <div class="card-body">
 
-        <template x-for="advice in $store.veriler.advList">
-          <!-- List item -->
-          <li class="list-group-item">
-            <span class="badge bg-success me-3">#biriyilikyapkendine</span>
-            <span x-text="advice"></span>
-          </li>
-          
-        </template>
-      </ul>
-    </div>
+        <!-- data listing with Alpine.js -->
+        <ul class="list-group gap-1" x-data>
+          <template x-for="advice in $store.veriler.advList">
 
+            <!-- List item -->
+            <li class="list-group-item border rounded-3 d-inline-flex align-items-center">
+              <span class="badge d-inline-flex align-items-center p-1 pe-2 text-success-emphasis bg-success-subtle border border-success-subtle rounded-pill me-sm-3 me-1" >
+                <img class="rounded-circle me-1" width="24" height="24" src="https://avatars.githubusercontent.com/u/80075444?v=4" alt="sonatipek github profile">
+                #biriyilikyapkendine
+              </span>
+              <span class="" x-text="advice"></span>
+            </li>
+            
+          </template>
+        </ul>
+        
+      </div> <!--Card Body End -->
+    </div>  <!--Card End -->
   </main>
 </Layout>
+
 
 <script>
     document.addEventListener("alpine:init", () => {
