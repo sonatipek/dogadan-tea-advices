@@ -40,13 +40,12 @@ Geliştirmeye yardım etmek veya kendi bilgisaayarınızda test etmek için kull
 | `npm run astro -- --help` | Astro CLI hakkında bilgi alın                                        |
 
 ## Eklenecek Özellikler
-1. Footer eklenecek
-2. Günlük Tavsiye ve anasayfa birbirinden ayrılacak
-3. anasayfada tanıtım olacak, nasıl destek olunacağı yazacak ve günlük tavsiye butonuna yönlendirme olacak
-4. Günlük tavsiye sayfasına daha iyi bir görünüm kazandırılacak
-5. dark ve light mode eklenecek
-6. tr ve en dil destekleri eklenecek
-7. Tavsiye girişi yapılacak
+1. Günlük Tavsiye ve anasayfa birbirinden ayrılacak
+2. anasayfada tanıtım olacak, nasıl destek olunacağı yazacak ve günlük tavsiye butonuna yönlendirme olacak
+3. Günlük tavsiye sayfasına daha iyi bir görünüm kazandırılacak
+4. dark ve light mode eklenecek
+5. tr ve en dil destekleri eklenecek
+6. Tavsiye girişi yapılacak
 
 # EN
 ## 👨🏻‍💻 Tech Stack

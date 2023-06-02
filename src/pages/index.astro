@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<main class="container col-md-6 col-sm-10 mt-5" x-data="{ open: false }">
+	<main class="container col-md-6 col-sm-10 mt-5" style="min-height: 52vh;" x-data="{ open: false }">
          
-        <ul class="list-group list-group-flush h-100 pt-5">
+        <ul class="list-group list-group-flush pt-5">
 
 			<!-- Random advice from advList waiting to be shown here  -->
 			<li x-show="open" class="list-group-item text-center" x-transition>
