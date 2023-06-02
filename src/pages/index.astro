@@ -16,7 +16,7 @@ import Layout from '../layouts/Layout.astro';
 				</ul>
 
 				<!-- If  button is clicked > random advice is shown and the button is disabled  -->
-				<button type="button" class="w-100 btn btn-lg btn-success" :disabled="open ? true : false" x-on:click="open = !open">Tavsiye Ver</button>
+				<button type="button" class="w-100 btn btn-lg btn-success" :disabled="open ? true : false" x-on:click="open = !open">Tavsiye Al</button>
 				
 				<!-- If on above button is clicked > this information message is shown -->
 				<small :class="open ? 'd-block' : 'd-none'" class="text-secondary fw-normal">*Her yenilemede bir adet tavsiye alabilirsiniz</small>
