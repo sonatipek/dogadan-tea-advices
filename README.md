@@ -1,8 +1,8 @@
 # TR
 ## 👨🏻‍💻 Kullanılan Teknolojiler
-- Alpine.js
-- Astro.js
-- Bootstrap
+- <img style="margin: 10px" src="https://alpinejs.dev/alpine_long.svg" alt="Alpine" height="50" /> Alpine.js
+- <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/astro.svg" alt="Astro" height="50" /> Astro.js
+- <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" /> Bootstrap
 
 ## 🚀 Proje Yapısı
 Proje içerisindeki klasör ve dosyalar:
