@@ -49,6 +49,7 @@ Geliştirmeye yardım etmek veya kendi bilgisaayarınızda test etmek için kull
 
 # EN
 ## 👨🏻‍💻 Tech Stack
+<img style="margin: 10px" src="https://alpinejs.dev/alpine_long.svg" alt="Alpine" height="50" /><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/astro.svg" alt="Astro" height="50" /><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" />
 - Alpine.js
 - Astro.js
 - Bootstrap
