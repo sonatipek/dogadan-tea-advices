@@ -29,7 +29,7 @@ Proje içerisindeki klasör ve dosyalar:
 ```
 
 ## 🧞 Komutlar
-Geliştirmeye yardım etmek veya kendi bilgisaayarınızda test etmek için kullanmanız için terminale ``npm i`` yazıp devam ettikten sonra, ``npm run dev`` komutu ile projeyi çalıştırabilirsiniz. Proje sorunsuz bir şekilde çalıaşacaktır.
+Geliştirmeye yardım etmek veya kendi bilgisaayarınızda test etmek için kullanmanız için terminale ``npm i`` yazıp devam ettikten sonra, ``npm run dev`` komutu ile projeyi çalıştırabilirsiniz. Proje sorunsuz bir şekilde çalışacaktır.
 
 | Komut                     | Yapacağı İş                                                          |
 | :------------------------ | :------------------------------------------------------------------- |
