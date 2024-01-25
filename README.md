@@ -40,13 +40,6 @@ Geliştirmeye yardım etmek veya kendi bilgisaayarınızda test etmek için kull
 | `npm run astro ...`       | `astro add`, `astro check` gibi CLI komutlarını çalıştırır           |
 | `npm run astro -- --help` | Astro CLI hakkında bilgi alın                                        |
 
-## Eklenecek Özellikler
-1. Günlük Tavsiye ve anasayfa birbirinden ayrılacak
-2. anasayfada tanıtım olacak, nasıl destek olunacağı yazacak ve günlük tavsiye butonuna yönlendirme olacak
-3. Tavsiye girişi yapılacak
-4. dark ve light mode eklenecek
-5. tr ve en dil destekleri eklenece
-
 # EN
 ## 👨🏻‍💻 Tech Stack
 <img style="margin: 10px" src="https://alpinejs.dev/alpine_long.svg" alt="Alpine" height="50" /><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/astro.svg" alt="Astro" height="50" /><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" />
